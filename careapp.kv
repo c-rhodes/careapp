@@ -1,0 +1,44 @@
+#: import la kivy.adapters.listadapter
+#: import ok main
+
+CareAppScreenManager:
+    UserSelectScreen:
+    DisabilitiesScreen:
+
+<DisabilityListItem>:
+    size_hint_y: None
+    height: '100dp'
+    Label:
+        text: root.name
+
+<UserSelectScreen>:
+    name: 'user_select'
+    FloatLayout:
+        canvas.before:
+            Color:
+                rgba: (1, 1, 1, 1)
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        Button:
+            text: 'Carer'
+            size_hint: None, None
+            pos: (root.width/2-self.width, root.height/2-self.width/2)
+            on_press: root.manager.current = 'disabilities'
+        Button:
+            text: 'Caree'
+            size_hint: None, None
+            pos: (root.width/2, root.height/2-self.width/2)
+            on_press: root.manager.current = 'disabilities'
+
+<DisabilitiesScreen>:
+    name: 'disabilities'
+    BoxLayout:
+        orientation: 'vertical'
+        list_view: list_view
+        Button:
+            text: 'Back'
+            on_press: root.manager.current = 'user_select'
+        ListView:
+            id: list_view
+            adapter: la.ListAdapter(data=[], cls=ok.DisabilityListItem, args_converter=root.disability_converter)
