@@ -1,0 +1,22 @@
+#app
+CareForm:
+
+# root
+<CareForm>:
+    canvas.before:
+        Color:
+            rgba: (1, 1, 1, 1)
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    # self
+    Button:
+        text: 'Carer'
+        size_hint: None, None
+        pos: (root.width/2-self.width, root.height/2-self.width/2)
+        on_press: root.select_user(user='carer')
+    Button:
+        text: 'Caree'
+        size_hint: None, None
+        pos: (root.width/2, root.height/2-self.width/2)
+        on_press: root.select_user(user='caree')
