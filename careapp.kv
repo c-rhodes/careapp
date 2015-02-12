@@ -1,22 +1,25 @@
+#: import NoTransition kivy.uix.screenmanager.NoTransition
 #: import la kivy.adapters.listadapter
+#: import utils kivy.utils
 #: import ok main
 
 CareAppScreenManager:
+    transition: NoTransition()
     UserSelectScreen:
     DisabilitiesScreen:
 
 <DisabilityListItem>:
     size_hint_y: None
-    height: '100dp'
-    Label:
-        text: root.name
+    height: '75dp'
+    text: root.name
+    on_press: app.root.new_disability_info_screen(''.join(c for c in self.name.lower() if c != ' '))
 
 <UserSelectScreen>:
     name: 'user_select'
     FloatLayout:
         canvas.before:
             Color:
-                rgba: (1, 1, 1, 1)
+                rgba: utils.get_color_from_hex('#206C49')
             Rectangle:
                 pos: self.pos
                 size: self.size
@@ -36,9 +39,44 @@ CareAppScreenManager:
     BoxLayout:
         orientation: 'vertical'
         list_view: list_view
-        Button:
-            text: 'Back'
-            on_press: root.manager.current = 'user_select'
+        AnchorLayout:
+            anchor_y: 'top'
+            size_hint_y: None
+            spacing: '10dp'
+            padding: '10dp'
+            GridLayout:
+                cols: 2
+                row_default_height: '40dp'
+                row_force_default: True
+                Button:
+                    text: 'Back'
+                    size_hint: None, None
+                    on_press: root.manager.current = 'user_select'
+                Label:
+                    text: 'Select a disability from the list for more information.'
+                    size_hint_y: None
         ListView:
+            size_hint_y: 2
             id: list_view
-            adapter: la.ListAdapter(data=[], cls=ok.DisabilityListItem, args_converter=root.disability_converter)
+            adapter: la.ListAdapter(data=ok.DISABILITIES, cls=ok.DisabilityListItem, args_converter=root.disability_converter)
+
+<DisabilityInfoScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        canvas.before:
+            Color:
+                rgba: utils.get_color_from_hex('#206C49')
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        BoxLayout:
+            size_hint: None, None
+            orientation: 'vertical'
+            Button:
+                text: 'Back'
+                height: '30dp'
+                size_hint: None, None
+                on_press: root.manager.current = 'disabilities'
+        Label:
+            text: root.name
+            font_size: 30
