@@ -1,5 +1,5 @@
 {
-   "eip_services":{
+   "Early Intervention and Prevention Services": {
       "Audlem and District Community Action (ADCA)":{
          "about":"Audlem and District Community Action supports people aged 50+ in the Audlem area. The activities they provide include: ",
          "service_offers":[
@@ -28,20 +28,13 @@
 
       }
    },
-   "ia_services":{
-      "name":{
-
-      },
-      "service name2":{
-
-      },
-
+   "Information and Advice Services": {
+      "service": "1"
    },
-   "carers_services":{
-
+   "Services for Carers": {
+      "service": "1"
    },
-   "advocacy_services":{
-
-   },
-
+   "Advocacy Services": {
+      "service": "1"
+   }
 }
