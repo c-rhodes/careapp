@@ -3,16 +3,55 @@
 #: import utils kivy.utils
 #: import ok main
 
-CareAppScreenManager:
-    transition: NoTransition()
-    UserSelectScreen:
-    DisabilitiesScreen:
+CareAppRoot:
 
-<DisabilityListItem>:
+<CareAppRoot>:
+    UserSelectForm:
+
+<UserSelectForm>:
+    canvas.before:
+        Color:
+            rgba: utils.get_color_from_hex('#206C49')
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    Button:
+        text: 'Carer'
+        size_hint: None, None
+        pos: (root.width/2-self.width, root.height/2-self.width/2)
+        on_press: root.show_services_list('carer')
+    Button:
+        text: 'Caree'
+        size_hint: None, None
+        pos: (root.width/2, root.height/2-self.width/2)
+        on_press: root.show_services_list('caree')
+
+<ServiceListItem>:
     size_hint_y: None
     height: '75dp'
     text: root.name
-    on_press: app.root.new_disability_info_screen(''.join(c for c in self.name.lower() if c != ' '))
+    on_press: app.root.new_service_info_page(root.name)
+
+<ServiceList>:
+    orientation: 'vertical'
+    list_view: list_view
+    AnchorLayout:
+        anchor_y: 'top'
+        height: '40dp'
+        size_hint_y: None
+        GridLayout:
+            cols: 2
+            row_default_height: '40dp'
+            row_force_default: True
+            Button:
+                text: 'Back'
+                size_hint_x: None
+                on_press: root.show_userselect()
+            Label:
+                text: 'Select a disability from the list for more information.'
+    ListView:
+        id: list_view
+        adapter: la.ListAdapter(data=[], cls=ok.ServiceListItem, args_converter=root.disability_converter)
 
 <UserSelectScreen>:
     name: 'user_select'
@@ -27,40 +66,14 @@ CareAppScreenManager:
             text: 'Carer'
             size_hint: None, None
             pos: (root.width/2-self.width, root.height/2-self.width/2)
-            on_press: root.manager.current = 'disabilities'
+            on_press: root.select('carer')
         Button:
             text: 'Caree'
             size_hint: None, None
             pos: (root.width/2, root.height/2-self.width/2)
-            on_press: root.manager.current = 'disabilities'
+            on_press: root.select('caree')
 
-<DisabilitiesScreen>:
-    name: 'disabilities'
-    BoxLayout:
-        orientation: 'vertical'
-        list_view: list_view
-        AnchorLayout:
-            anchor_y: 'top'
-            size_hint_y: None
-            spacing: '10dp'
-            padding: '10dp'
-            GridLayout:
-                cols: 2
-                row_default_height: '40dp'
-                row_force_default: True
-                Button:
-                    text: 'Back'
-                    size_hint: None, None
-                    on_press: root.manager.current = 'user_select'
-                Label:
-                    text: 'Select a disability from the list for more information.'
-                    size_hint_y: None
-        ListView:
-            size_hint_y: 2
-            id: list_view
-            adapter: la.ListAdapter(data=ok.DISABILITIES, cls=ok.DisabilityListItem, args_converter=root.disability_converter)
-
-<DisabilityInfoScreen>:
+<ServiceInfoPage>:
     BoxLayout:
         orientation: 'vertical'
         canvas.before:
@@ -69,14 +82,15 @@ CareAppScreenManager:
             Rectangle:
                 pos: self.pos
                 size: self.size
-        BoxLayout:
-            size_hint: None, None
-            orientation: 'vertical'
+        AnchorLayout:
+            anchor_y: 'top'
+            anchor_x: 'left'
+            size_hint_y: None
             Button:
                 text: 'Back'
                 height: '30dp'
                 size_hint: None, None
-                on_press: root.manager.current = 'disabilities'
+                on_press: print('back to list')
         Label:
             text: root.name
             font_size: 30

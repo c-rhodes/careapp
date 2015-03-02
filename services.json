@@ -1,0 +1,45 @@
+{
+	"eip_services": {
+		"Audlem and District Community Action (ADCA)" : {
+			"about": "Audlem and District Community Action supports people aged 50+ in the Audlem area. The activities they provide include: ",
+			"service_offers": [
+				"a weekly day club",
+				"coffee clubs",
+				"befriending and home library services for people who are housebound or living alone",
+				"voluntary driving scheme to take people to appointments",
+				"volunteer opportunities"
+			],
+			"about_organisation": "Audlem and District Community Action is a local charity which provides support and activity for older people in Audlem, Hankelow, Buerton, Hatherton, Lightwood Green and the wider rural district.",
+			"who_can_use_the_service": "People aged over 50",
+			"contact": {
+					"telephone": "07845 495973",
+					"email": "ronni@chapelhouse.org",
+					"address": {
+						"house_name": "Hankelow Methodist Church",
+						"street_name": "11 Old School Lane",
+						"town": "Hankelow",
+						"city": "Crewe",
+						"postcode": "CW3 0JN"
+					}
+				},
+			"website": "http://www.audlem.org/newsroom/audlem-district-community-action.html"
+		},
+		"Bridgend Centre": {
+			
+		}
+	},
+	"ia_services": {
+		"name": {
+
+		},
+		"service name2": {
+
+		},
+	},
+	"carers_services": {
+
+	},
+	"advocacy_services": {
+
+	},
+}
