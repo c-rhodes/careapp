@@ -4,31 +4,19 @@ import kivy
 import json
 
 from kivy.app import App
+from kivy.uix.label import Label
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.floatlayout import FloatLayout
+from kivy.uix.anchorlayout import AnchorLayout
+from kivy.uix.gridlayout import GridLayout
 from kivy.uix.listview import ListItemButton, ListView
 from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.properties import ObjectProperty, StringProperty, ListProperty
 from kivy.utils import get_color_from_hex
 from kivy.adapters.listadapter import ListAdapter
 
-# DISABILITIES = ['Disability {}'.format(i)  for i in range(100)]
-# services = {
-#     'carer': ['Alzheimer\'s Society', 'Carer\'s Reablement'],
-#     'caree': ['test', 'test2']
-# }
-#
-
 with open('services.json') as f:
     services = json.loads(f.read())
-
-class UserSelectForm(FloatLayout):
-
-    def show_services_list(self, user):
-        print(user)
-        self.clear_widgets()
-        self.services_list = ServiceList(user)
-        self.add_widget(self.services_list)
 
 
 class ServiceTypeList(BoxLayout):
@@ -36,29 +24,33 @@ class ServiceTypeList(BoxLayout):
 
     def __init__(self, **kwargs):
         super(ServiceTypeList, self).__init__(**kwargs)
-        self.app = CareApp.get_running_app()
         self.list_adapter = ListAdapter(
             data=services.keys(),
             args_converter=self.services_converter,
             cls=ServiceTypeListItem
         )
         self.services_list = ListView(adapter=self.list_adapter)
+        anchor = AnchorLayout(anchor_y='top', height='40dp', size_hint_y=None)
+        grid = GridLayout(cols=1, row_default_height='40dp', row_force_default=True)
+        grid.add_widget(Label(text='Select a service category from the list below for more services.'))
+        anchor.add_widget(grid)
+        self.add_widget(anchor)
         self.add_widget(self.services_list)
-        # self.services_list.adapter.data.extend(services.keys())
 
     def services_converter(self, index, service):
         return dict(name=service)
 
+
 class ServiceTypeListItem(ListItemButton):
     name = StringProperty()
-    
+
+
 class ServiceList(BoxLayout):
     list_view = ObjectProperty()
 
-    def __init__(self, user, **kwargs):
+    def __init__(self, service_type, **kwargs):
         super(ServiceList, self).__init__(**kwargs)
-        self.app = CareApp.get_running_app()
-        self.list_view.adapter.data.extend(services[user])
+        self.list_view.adapter.data.extend(services[service_type].keys())
 
     def disability_converter(self, index, disability):
         result = dict(name=disability)
@@ -68,8 +60,10 @@ class ServiceList(BoxLayout):
         self.clear_widgets()
         self.add_widget(UserSelectForm()) 
 
+
 class ServiceListItem(ListItemButton):
     name = StringProperty()
+
 
 class ServiceInfoPage(BoxLayout):
     def __init__(self, name, **kwargs):
@@ -83,6 +77,17 @@ class CareAppRoot(BoxLayout):
         self.service_info_page = ServiceInfoPage(service)
         self.clear_widgets()
         self.add_widget(self.service_info_page)
+
+    def show_services_list(self, service_type):
+        self.clear_widgets()
+        self.services_list = ServiceList(service_type)
+        self.service_type = service_type
+        self.add_widget(self.services_list)
+
+    def show_service_types(self):
+        self.clear_widgets()
+        self.add_widget(ServiceTypeList())
+
 
 class CareApp(App):
     pass    

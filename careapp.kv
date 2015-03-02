@@ -1,4 +1,3 @@
-#: import NoTransition kivy.uix.screenmanager.NoTransition
 #: import la kivy.adapters.listadapter
 #: import utils kivy.utils
 #: import ok main
@@ -8,29 +7,11 @@ CareAppRoot:
 <CareAppRoot>:
     ServiceTypeList:
 
-<UserSelectForm>:
-    canvas.before:
-        Color:
-            rgba: utils.get_color_from_hex('#206C49')
-        Rectangle:
-            pos: self.pos
-            size: self.size
-    Button:
-        text: 'Carer'
-        size_hint: None, None
-        pos: (root.width/2-self.width, root.height/2-self.width/2)
-        on_press: root.show_services_list('carer')
-    Button:
-        text: 'Caree'
-        size_hint: None, None
-        pos: (root.width/2, root.height/2-self.width/2)
-        on_press: root.show_services_list('caree')
-
 <ServiceTypeListItem>:
     size_hint_y: None
     height: '75dp'
     text: root.name
-    on_press: print('pressed')
+    on_press: app.root.show_services_list(root.name)
 
 <ServiceListItem>:
     size_hint_y: None
@@ -40,10 +21,22 @@ CareAppRoot:
 
 <ServiceTypeList>:
     orientation: 'vertical'
+    canvas.before:
+        Color:
+            rgba: utils.get_color_from_hex('#206C49')
+        Rectangle:
+            pos: self.pos
+            size: self.size
 
 <ServiceList>:
     orientation: 'vertical'
     list_view: list_view
+    canvas.before:
+        Color:
+            rgba: utils.get_color_from_hex('#206C49')
+        Rectangle:
+            pos: self.pos
+            size: self.size
     AnchorLayout:
         anchor_y: 'top'
         height: '40dp'
@@ -55,32 +48,12 @@ CareAppRoot:
             Button:
                 text: 'Back'
                 size_hint_x: None
-                on_press: root.show_userselect()
+                on_press: app.root.show_service_types()
             Label:
-                text: 'Select a disability from the list for more information.'
+                text: 'Select a service from the list for more information.'
     ListView:
         id: list_view
         adapter: la.ListAdapter(data=[], cls=ok.ServiceListItem, args_converter=root.disability_converter)
-
-<UserSelectScreen>:
-    name: 'user_select'
-    FloatLayout:
-        canvas.before:
-            Color:
-                rgba: utils.get_color_from_hex('#206C49')
-            Rectangle:
-                pos: self.pos
-                size: self.size
-        Button:
-            text: 'Carer'
-            size_hint: None, None
-            pos: (root.width/2-self.width, root.height/2-self.width/2)
-            on_press: root.select('carer')
-        Button:
-            text: 'Caree'
-            size_hint: None, None
-            pos: (root.width/2, root.height/2-self.width/2)
-            on_press: root.select('caree')
 
 <ServiceInfoPage>:
     BoxLayout:
@@ -99,7 +72,7 @@ CareAppRoot:
                 text: 'Back'
                 height: '30dp'
                 size_hint: None, None
-                on_press: print('back to list')
+                on_press: app.root.show_services_list(app.root.service_type)
         Label:
             text: root.name
             font_size: 30
