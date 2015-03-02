@@ -34,8 +34,5 @@ node_modules/
 # Vagrant
 .vagrant
 
-staticfiles/
-portal/media/
-
-# Redis
-dump.rdb
+.buildozer
+bin
