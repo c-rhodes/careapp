@@ -6,7 +6,7 @@
 CareAppRoot:
 
 <CareAppRoot>:
-    UserSelectForm:
+    ServiceTypeList:
 
 <UserSelectForm>:
     canvas.before:
@@ -26,11 +26,20 @@ CareAppRoot:
         pos: (root.width/2, root.height/2-self.width/2)
         on_press: root.show_services_list('caree')
 
+<ServiceTypeListItem>:
+    size_hint_y: None
+    height: '75dp'
+    text: root.name
+    on_press: print('pressed')
+
 <ServiceListItem>:
     size_hint_y: None
     height: '75dp'
     text: root.name
     on_press: app.root.new_service_info_page(root.name)
+
+<ServiceTypeList>:
+    orientation: 'vertical'
 
 <ServiceList>:
     orientation: 'vertical'

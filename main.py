@@ -1,6 +1,7 @@
 __version__ = '0.0.1'
 
 import kivy
+import json
 
 from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
@@ -11,11 +12,15 @@ from kivy.properties import ObjectProperty, StringProperty, ListProperty
 from kivy.utils import get_color_from_hex
 from kivy.adapters.listadapter import ListAdapter
 
-DISABILITIES = ['Disability {}'.format(i)  for i in range(100)]
-services = {
-    'carer': ['Alzheimer\'s Society', 'Carer\'s Reablement'],
-    'caree': ['test', 'test2']
-}
+# DISABILITIES = ['Disability {}'.format(i)  for i in range(100)]
+# services = {
+#     'carer': ['Alzheimer\'s Society', 'Carer\'s Reablement'],
+#     'caree': ['test', 'test2']
+# }
+#
+
+with open('services.json') as f:
+    services = json.loads(f.read())
 
 class UserSelectForm(FloatLayout):
 
@@ -26,6 +31,27 @@ class UserSelectForm(FloatLayout):
         self.add_widget(self.services_list)
 
 
+class ServiceTypeList(BoxLayout):
+    services_list = ObjectProperty()
+
+    def __init__(self, **kwargs):
+        super(ServiceTypeList, self).__init__(**kwargs)
+        self.app = CareApp.get_running_app()
+        self.list_adapter = ListAdapter(
+            data=services.keys(),
+            args_converter=self.services_converter,
+            cls=ServiceTypeListItem
+        )
+        self.services_list = ListView(adapter=self.list_adapter)
+        self.add_widget(self.services_list)
+        # self.services_list.adapter.data.extend(services.keys())
+
+    def services_converter(self, index, service):
+        return dict(name=service)
+
+class ServiceTypeListItem(ListItemButton):
+    name = StringProperty()
+    
 class ServiceList(BoxLayout):
     list_view = ObjectProperty()
 
