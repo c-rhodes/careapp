@@ -12,12 +12,26 @@ CareAppRoot:
     height: '75dp'
     text: root.name
     on_press: app.root.show_services_list(root.name)
+    selected_color: 0, 0, 0, 0
+    deselected_color: 0, 0, 0, 0
+    canvas.before:
+        Color:
+            rgba: utils.get_color_from_hex('#206C49')
+        Rectangle:
+            pos: self.pos
+            size: self.size
 
 <ServiceListItem>:
     size_hint_y: None
     height: '75dp'
     text: root.name
     on_press: app.root.new_service_info_page(root.name)
+    canvas.before:
+        Color:
+            rgba: utils.get_color_from_hex('#206C49')
+        Rectangle:
+            pos: self.pos
+            size: self.size
 
 <ServiceTypeList>:
     orientation: 'vertical'
@@ -39,11 +53,11 @@ CareAppRoot:
             size: self.size
     AnchorLayout:
         anchor_y: 'top'
-        height: '40dp'
+        height: '30dp'
         size_hint_y: None
         GridLayout:
             cols: 2
-            row_default_height: '40dp'
+            row_default_height: '30dp'
             row_force_default: True
             Button:
                 text: 'Back'

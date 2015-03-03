@@ -119,8 +119,16 @@ class ServiceInfoPage(BoxLayout):
 **Contact**
 
 Telephone: {telephone}
+
 Email: {email}
-Address: {address}
+
+Address:
+
+    {house_name},\n
+    {street_name},\n
+    {town},\n
+    {city},\n
+    {postcode}\n
 
 Website: {website}
 """.format(
@@ -131,7 +139,11 @@ Website: {website}
             service_availibility=service_availibility,
             telephone=telephone,
             email=email,
-            address=full_address,
+            house_name=house_name,
+            street_name=street_name,
+            town=town,
+            city=city,
+            postcode=postcode,
             website=website
         )
         super(ServiceInfoPage, self).__init__(**kwargs)
