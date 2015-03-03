@@ -65,6 +65,7 @@ CareAppRoot:
                 pos: self.pos
                 size: self.size
         AnchorLayout:
+            height: '30dp'
             anchor_y: 'top'
             anchor_x: 'left'
             size_hint_y: None
@@ -73,6 +74,5 @@ CareAppRoot:
                 height: '30dp'
                 size_hint: None, None
                 on_press: app.root.show_services_list(app.root.service_type)
-        Label:
-            text: root.name
-            font_size: 30
+        RstDocument:
+            text: root.text

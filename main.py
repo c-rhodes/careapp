@@ -66,15 +66,81 @@ class ServiceListItem(ListItemButton):
 
 
 class ServiceInfoPage(BoxLayout):
-    def __init__(self, name, **kwargs):
-        self.name = name
+    def __init__(self, service_type, service_name, **kwargs):
+        self.service_name = service_name
+
+        service_info = services[service_type][service_name]
+        service_about = service_info['about']
+        service_offers = service_info['service_offers']
+        about_organisation = service_info['about_organisation']
+        service_availibility = service_info['service_availibility'] 
+
+        contact = service_info['contact']
+        telephone = contact['telephone']
+        email = contact['email']
+        address = contact['address']
+        house_name = address['house_name']
+        street_name = address['street_name']
+        town = address['town']
+        city = address['city']
+        postcode = address['postcode']
+        
+        full_address = '{}\n{}\n{}\n{}\n{}\n'.format(
+            house_name,
+            street_name,
+            town,
+            city,
+            postcode
+        )
+        website = service_info['website']
+
+        offers_rst_text = ''
+        for offer in service_offers:
+            offers_rst_text += ' * {}\n'.format(offer)
+        self.text = """
+.. _top:
+
+{service_name}
+
+**About the service**
+
+{about}
+
+{offers}
+
+**About the organisation**
+
+{about_org}
+
+**Who can use the service?**
+
+{service_availibility}
+
+**Contact**
+
+Telephone: {telephone}
+Email: {email}
+Address: {address}
+
+Website: {website}
+""".format(
+            service_name=self.service_name + '\n' + '='*len(self.service_name) ,
+            about=service_about,
+            offers=offers_rst_text,
+            about_org=about_organisation,
+            service_availibility=service_availibility,
+            telephone=telephone,
+            email=email,
+            address=full_address,
+            website=website
+        )
         super(ServiceInfoPage, self).__init__(**kwargs)
 
 
 class CareAppRoot(BoxLayout):
 
     def new_service_info_page(self, service):
-        self.service_info_page = ServiceInfoPage(service)
+        self.service_info_page = ServiceInfoPage(self.service_type, service)
         self.clear_widgets()
         self.add_widget(self.service_info_page)
 
