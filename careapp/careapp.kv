@@ -12,17 +12,12 @@ CareAppRoot:
     valign: 'middle'
     height: '75dp'
     text: root.name
-    text_size: self.size
+    text_size: self.size  # Resizing
     size_hint_y: None
     on_press: app.root.show_services_list(root.name)
-    selected_color: utils.get_color_from_hex('#206C49')
-    deselected_color: utils.get_color_from_hex('#206C49')
-    canvas.before:
-        Color:
-            rgba: 255, 255, 255, 1
-        Rectangle:
-            pos: self.pos
-            size: self.size
+    color: 0, 0, 0, 1  # Text color
+    selected_color: 255, 255, 255, 1
+    deselected_color: 255, 255, 255, 1
 
 <ServiceListItem>:
     halign: 'center'
@@ -32,12 +27,9 @@ CareAppRoot:
     text_size: self.size
     size_hint_y: None
     on_press: app.root.new_service_info_page(root.name)
-    canvas.before:
-        Color:
-            rgba: utils.get_color_from_hex('#206C49')
-        Rectangle:
-            pos: self.pos
-            size: self.size
+    color: 0, 0, 0, 1  # Text color
+    selected_color: 255, 255, 255, 1
+    deselected_color: 255, 255, 255, 1
 
 <ServiceTypeList>:
     orientation: 'vertical'
@@ -50,8 +42,10 @@ CareAppRoot:
     Label:
         halign: 'center'
         valign: 'middle'
+        height: '50dp'
         text: 'Select a service category from the list below for more services.'
         text_size: self.size
+        color: 0, 0, 0, 1  # Text color
         font_size: '16dp'
         size_hint_y: None
     ListView:
@@ -69,11 +63,11 @@ CareAppRoot:
             size: self.size
     AnchorLayout:
         anchor_y: 'top'
-        height: '30dp'
+        height: '50dp'
         size_hint_y: None
         GridLayout:
             cols: 2
-            row_default_height: '30dp'
+            row_default_height: '50dp'
             row_force_default: True
             Button:
                 text: 'Back'
@@ -84,6 +78,7 @@ CareAppRoot:
                 valign: 'middle'
                 text: 'Select a service from the list for more information.'
                 text_size: self.size
+                color: 0, 0, 0, 1  # Text color
     ListView:
         id: list_view
         adapter: la.ListAdapter(data=[], cls=ok.ServiceListItem, args_converter=root.disability_converter)
