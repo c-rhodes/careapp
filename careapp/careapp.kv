@@ -8,23 +8,26 @@ CareAppRoot:
     ServiceTypeList:
 
 <ServiceTypeListItem>:
-    size_hint_y: None
     height: '75dp'
     text: root.name
+    text_size: self.size
+    size_hint_y: None
+    text_pos: 0, self.height / 2
     on_press: app.root.show_services_list(root.name)
-    selected_color: 0, 0, 0, 0
-    deselected_color: 0, 0, 0, 0
+    selected_color: utils.get_color_from_hex('#206C49')
+    deselected_color: utils.get_color_from_hex('#206C49')
     canvas.before:
         Color:
-            rgba: utils.get_color_from_hex('#206C49')
+            rgba: 255, 255, 255, 1
         Rectangle:
             pos: self.pos
             size: self.size
 
 <ServiceListItem>:
-    size_hint_y: None
     height: '75dp'
     text: root.name
+    text_size: self.size
+    size_hint_y: None
     on_press: app.root.new_service_info_page(root.name)
     canvas.before:
         Color:
@@ -41,6 +44,14 @@ CareAppRoot:
         Rectangle:
             pos: self.pos
             size: self.size
+    Label:
+        text: 'Select a service category from the list below for more services.'
+        text_size: self.size
+        font_size: '16dp'
+        size_hint_y: None
+    ListView:
+        adapter: root.list_adapter
+        
 
 <ServiceList>:
     orientation: 'vertical'

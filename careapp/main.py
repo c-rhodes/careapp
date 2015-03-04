@@ -20,22 +20,13 @@ with open('services.json') as f:
 
 
 class ServiceTypeList(BoxLayout):
-    services_list = ObjectProperty()
-
     def __init__(self, **kwargs):
-        super(ServiceTypeList, self).__init__(**kwargs)
         self.list_adapter = ListAdapter(
             data=services.keys(),
             args_converter=self.services_converter,
             cls=ServiceTypeListItem
         )
-        self.services_list = ListView(adapter=self.list_adapter)
-        anchor = AnchorLayout(anchor_y='top', height='40dp', size_hint_y=None)
-        grid = GridLayout(cols=1, row_default_height='40dp', row_force_default=True)
-        grid.add_widget(Label(text='Select a service category from the list below for more services.'))
-        anchor.add_widget(grid)
-        self.add_widget(anchor)
-        self.add_widget(self.services_list)
+        super(ServiceTypeList, self).__init__(**kwargs)
 
     def services_converter(self, index, service):
         return dict(name=service)
