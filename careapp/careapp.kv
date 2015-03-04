@@ -8,11 +8,12 @@ CareAppRoot:
     ServiceTypeList:
 
 <ServiceTypeListItem>:
+    halign: 'center'
+    valign: 'middle'
     height: '75dp'
     text: root.name
     text_size: self.size
     size_hint_y: None
-    text_pos: 0, self.height / 2
     on_press: app.root.show_services_list(root.name)
     selected_color: utils.get_color_from_hex('#206C49')
     deselected_color: utils.get_color_from_hex('#206C49')
@@ -24,6 +25,8 @@ CareAppRoot:
             size: self.size
 
 <ServiceListItem>:
+    halign: 'center'
+    valign: 'middle'
     height: '75dp'
     text: root.name
     text_size: self.size
@@ -45,6 +48,8 @@ CareAppRoot:
             pos: self.pos
             size: self.size
     Label:
+        halign: 'center'
+        valign: 'middle'
         text: 'Select a service category from the list below for more services.'
         text_size: self.size
         font_size: '16dp'
@@ -75,7 +80,10 @@ CareAppRoot:
                 size_hint_x: None
                 on_press: app.root.show_service_types()
             Label:
+                halign: 'center'
+                valign: 'middle'
                 text: 'Select a service from the list for more information.'
+                text_size: self.size
     ListView:
         id: list_view
         adapter: la.ListAdapter(data=[], cls=ok.ServiceListItem, args_converter=root.disability_converter)
