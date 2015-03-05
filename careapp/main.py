@@ -11,34 +11,6 @@ __version__ = '0.0.1'
 with open('services.json') as f:
     services = json.loads(f.read().decode('utf8'))
 
-text = """
-.. _top:
-
-{service_name}
-
-**About the service**
-
-{about}
-
-{offers}
-
-**About the organisation**
-
-{about_org}
-
-{service_availibility}
-
-**Contact**
-
-{telephone}
-
-{email}
-
-Address: {address}
-
-{website}
-"""
-
 
 class ServiceTypeList(BoxLayout):
     def __init__(self, **kwargs):
@@ -76,8 +48,40 @@ class ServiceListItem(ListItemButton):
 class ServiceInfoPage(BoxLayout):
     def __init__(self, service_type, service_name, **kwargs):
         self.service_name = service_name
+        self.service_type = service_type
+        self.text_format_str = """
+.. _top:
 
-        service_info = services[service_type][service_name]
+{service_name}
+
+**About the service**
+
+{about}
+
+{offers}
+
+**About the organisation**
+
+{about_org}
+
+{service_availibility}
+
+**Contact**
+
+{telephone}
+
+{email}
+
+Address: {address}
+
+{website}
+"""
+        self.text = self.build_page()
+        super(ServiceInfoPage, self).__init__(**kwargs)
+
+    def build_page(self):
+        """Create text for RSTDocument from services dict"""
+        service_info = services[self.service_type][self.service_name]
         service_about = service_info['about']
         about_organisation = service_info['about_organisation']
 
@@ -109,7 +113,7 @@ class ServiceInfoPage(BoxLayout):
         website = 'Website: {}'.format(service_info.get('website', 'n/a'))
         service_name_text = self.service_name + '\n{}'.format('=' * len(self.service_name))
 
-        self.text = text.format(
+        text = self.text_format_str.format(
             service_name=service_name_text,
             about=service_about,
             offers=service_offers_text,
@@ -120,7 +124,7 @@ class ServiceInfoPage(BoxLayout):
             address=address_text,
             website=website
         )
-        super(ServiceInfoPage, self).__init__(**kwargs)
+        return text
 
 
 class CareAppRoot(BoxLayout):
