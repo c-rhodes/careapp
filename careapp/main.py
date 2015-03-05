@@ -77,7 +77,7 @@ Address: {address}
 {website}
 """
         if page_text:
-            self.text = text
+            self.text = page_text
         else:
             self.text = self.build_page()
         super(ServiceInfoPage, self).__init__(**kwargs)
@@ -141,6 +141,7 @@ class CareAppRoot(BoxLayout):
             self.service_info_page = ServiceInfoPage(self.service_type, service, page_text=page_text)
         else:
             self.service_info_page = ServiceInfoPage(self.service_type, service)
+            self.pages[service] = self.service_info_page.text
         self.clear_widgets()
         self.add_widget(self.service_info_page)
 
