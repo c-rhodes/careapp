@@ -8,7 +8,7 @@ from kivy.adapters.listadapter import ListAdapter
 
 __version__ = '0.0.1'
 
-with open('services.json') as f:
+with open('data/services.json') as f:
     services = json.loads(f.read().decode('utf8'))
 
 
