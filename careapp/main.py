@@ -46,7 +46,7 @@ class ServiceListItem(ListItemButton):
 
 
 class ServiceInfoPage(BoxLayout):
-    def __init__(self, service_type, service_name, **kwargs):
+    def __init__(self, service_type, service_name, page_text=None, **kwargs):
         self.service_name = service_name
         self.service_type = service_type
         self.text_format_str = """
@@ -76,7 +76,10 @@ Address: {address}
 
 {website}
 """
-        self.text = self.build_page()
+        if page_text:
+            self.text = text
+        else:
+            self.text = self.build_page()
         super(ServiceInfoPage, self).__init__(**kwargs)
 
     def build_page(self):
@@ -128,9 +131,16 @@ Address: {address}
 
 
 class CareAppRoot(BoxLayout):
+    def __init__(self, **kwargs):
+        self.pages = dict()
+        super(CareAppRoot, self).__init__(**kwargs)
 
     def new_service_info_page(self, service):
-        self.service_info_page = ServiceInfoPage(self.service_type, service)
+        page_text = self.pages.get(service)
+        if page_text:
+            self.service_info_page = ServiceInfoPage(self.service_type, service, page_text=page_text)
+        else:
+            self.service_info_page = ServiceInfoPage(self.service_type, service)
         self.clear_widgets()
         self.add_widget(self.service_info_page)
 
