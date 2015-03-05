@@ -1,19 +1,12 @@
-__version__ = '0.0.1'
-
-import kivy
 import json
 
 from kivy.app import App
-from kivy.uix.label import Label
 from kivy.uix.boxlayout import BoxLayout
-from kivy.uix.floatlayout import FloatLayout
-from kivy.uix.anchorlayout import AnchorLayout
-from kivy.uix.gridlayout import GridLayout
-from kivy.uix.listview import ListItemButton, ListView
-from kivy.uix.screenmanager import ScreenManager, Screen
-from kivy.properties import ObjectProperty, StringProperty, ListProperty
-from kivy.utils import get_color_from_hex
+from kivy.uix.listview import ListItemButton
+from kivy.properties import ObjectProperty, StringProperty
 from kivy.adapters.listadapter import ListAdapter
+
+__version__ = '0.0.1'
 
 with open('services.json') as f:
     services = json.loads(f.read())
@@ -47,10 +40,6 @@ class ServiceList(BoxLayout):
         result = dict(name=disability)
         return result
 
-    def show_userselect(self):
-        self.clear_widgets()
-        self.add_widget(UserSelectForm()) 
-
 
 class ServiceListItem(ListItemButton):
     name = StringProperty()
@@ -64,7 +53,7 @@ class ServiceInfoPage(BoxLayout):
         service_about = service_info['about']
         service_offers = service_info['service_offers']
         about_organisation = service_info['about_organisation']
-        service_availibility = service_info['service_availibility'] 
+        service_availibility = service_info['service_availibility']
 
         contact = service_info['contact']
         telephone = contact['telephone']
@@ -75,7 +64,7 @@ class ServiceInfoPage(BoxLayout):
         town = address['town']
         city = address['city']
         postcode = address['postcode']
-        
+
         full_address = '{}\n{}\n{}\n{}\n{}\n'.format(
             house_name,
             street_name,
@@ -123,7 +112,7 @@ Address:
 
 Website: {website}
 """.format(
-            service_name=self.service_name + '\n' + '='*len(self.service_name) ,
+            service_name=self.service_name + '\n' + '=' * len(self.service_name),
             about=service_about,
             offers=offers_rst_text,
             about_org=about_organisation,
@@ -159,7 +148,7 @@ class CareAppRoot(BoxLayout):
 
 
 class CareApp(App):
-    pass    
+    pass
 
 if __name__ == '__main__':
     CareApp().run()
