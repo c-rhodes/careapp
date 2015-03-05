@@ -79,12 +79,20 @@ CareAppRoot:
         height: '50dp'
         size_hint_y: None
         GridLayout:
+            canvas.before:
+                Color:
+                    # Text color
+                    rgba: 0, 0, 0, 1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
             cols: 2
-            row_default_height: '50dp'
             row_force_default: True
+            row_default_height: '50dp'
             Button:
                 text: 'Back'
-                size_hint_x: None
+                height: '50dp'
+                size_hint: None, None
                 on_press: app.root.show_service_types()
             Label:
                 halign: 'center'
@@ -93,13 +101,6 @@ CareAppRoot:
                 text_size: self.size
                 font_size: '18dp'
                 color: 255, 255, 255, 1
-                canvas.before:
-                    Color:
-                        # Text color
-                        rgba: 0, 0, 0, 1
-                    Rectangle:
-                        pos: self.pos
-                        size: self.size
     ListView:
         id: list_view
         adapter: la.ListAdapter(data=[], cls=ok.ServiceListItem, args_converter=root.disability_converter)
