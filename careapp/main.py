@@ -9,7 +9,35 @@ from kivy.adapters.listadapter import ListAdapter
 __version__ = '0.0.1'
 
 with open('services.json') as f:
-    services = json.loads(f.read())
+    services = json.loads(f.read().decode('utf8'))
+
+text = """
+.. _top:
+
+{service_name}
+
+**About the service**
+
+{about}
+
+{offers}
+
+**About the organisation**
+
+{about_org}
+
+{service_availibility}
+
+**Contact**
+
+{telephone}
+
+{email}
+
+Address: {address}
+
+{website}
+"""
 
 
 class ServiceTypeList(BoxLayout):
@@ -51,79 +79,45 @@ class ServiceInfoPage(BoxLayout):
 
         service_info = services[service_type][service_name]
         service_about = service_info['about']
-        service_offers = service_info['service_offers']
         about_organisation = service_info['about_organisation']
-        service_availibility = service_info['service_availibility']
+
+        service_offers = service_info.get('service_offers')
+        service_offers_text = ''
+        if service_offers:
+            for offer in service_offers:
+                service_offers_text += ' * {}\n'.format(offer)
+
+        service_availibility = service_info.get('service_availibility')
+        if service_availibility:
+            service_availibility_text = \
+                '**Who can use the service?**\n\n{}'.format(
+                    service_availibility)
+        else:
+            service_availibility_text = ''
 
         contact = service_info['contact']
-        telephone = contact['telephone']
-        email = contact['email']
+        telephone_text = 'Telephone: {}'.format(contact.get('telephone', 'n/a'))
+        email_text = 'Email: {}'.format(contact.get('email', 'n/a'))
         address = contact['address']
-        house_name = address['house_name']
-        street_name = address['street_name']
-        town = address['town']
-        city = address['city']
-        postcode = address['postcode']
 
-        full_address = '{}\n{}\n{}\n{}\n{}\n'.format(
-            house_name,
-            street_name,
-            town,
-            city,
-            postcode
-        )
-        website = service_info['website']
+        address_text = ''
+        for addr_info in address.values():
+            if addr_info:
+                address_text += '{},\n'.format(addr_info)
 
-        offers_rst_text = ''
-        for offer in service_offers:
-            offers_rst_text += ' * {}\n'.format(offer)
-        self.text = """
-.. _top:
+        address_text = address_text.rstrip(',')  # Remove last ','
+        website = 'Website: {}'.format(service_info.get('website', 'n/a'))
+        service_name_text = self.service_name + '\n{}'.format('=' * len(self.service_name))
 
-{service_name}
-
-**About the service**
-
-{about}
-
-{offers}
-
-**About the organisation**
-
-{about_org}
-
-**Who can use the service?**
-
-{service_availibility}
-
-**Contact**
-
-Telephone: {telephone}
-
-Email: {email}
-
-Address:
-
-    {house_name},\n
-    {street_name},\n
-    {town},\n
-    {city},\n
-    {postcode}\n
-
-Website: {website}
-""".format(
-            service_name=self.service_name + '\n' + '=' * len(self.service_name),
+        self.text = text.format(
+            service_name=service_name_text,
             about=service_about,
-            offers=offers_rst_text,
+            offers=service_offers_text,
             about_org=about_organisation,
-            service_availibility=service_availibility,
-            telephone=telephone,
-            email=email,
-            house_name=house_name,
-            street_name=street_name,
-            town=town,
-            city=city,
-            postcode=postcode,
+            service_availibility=service_availibility_text,
+            telephone=telephone_text,
+            email=email_text,
+            address=address_text,
             website=website
         )
         super(ServiceInfoPage, self).__init__(**kwargs)

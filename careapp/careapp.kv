@@ -12,10 +12,12 @@ CareAppRoot:
     valign: 'middle'
     height: '75dp'
     text: root.name
-    text_size: self.size  # Resizing
+    # Resizing
+    text_size: self.size
+    font_size: '16dp'
     size_hint_y: None
     on_press: app.root.show_services_list(root.name)
-    color: 0, 0, 0, 1  # Text color
+    color: 0, 0, 0, 1
     selected_color: 255, 255, 255, 1
     deselected_color: 255, 255, 255, 1
 
@@ -25,6 +27,7 @@ CareAppRoot:
     height: '75dp'
     text: root.name
     text_size: self.size
+    font_size: '16dp'
     size_hint_y: None
     on_press: app.root.new_service_info_page(root.name)
     color: 0, 0, 0, 1  # Text color
@@ -32,32 +35,45 @@ CareAppRoot:
     deselected_color: 255, 255, 255, 1
 
 <ServiceTypeList>:
+    spacing: 2
+    padding: 2
     orientation: 'vertical'
     canvas.before:
         Color:
-            rgba: utils.get_color_from_hex('#206C49')
+            # Text color
+            rgba: 255, 255, 255, 1
         Rectangle:
             pos: self.pos
             size: self.size
     Label:
+        canvas.before:
+            Color:
+                # Text color
+                rgba: 0, 0, 0, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
         halign: 'center'
         valign: 'middle'
         height: '50dp'
-        text: 'Select a service category from the list below for more services.'
+        text: 'Select a type of service'
         text_size: self.size
-        color: 0, 0, 0, 1  # Text color
-        font_size: '16dp'
+        # Text color
+        color: 255, 255, 255, 1
+        font_size: '18dp'
         size_hint_y: None
     ListView:
+        spacing: 10
         adapter: root.list_adapter
         
 
 <ServiceList>:
+    spacing: 2
     orientation: 'vertical'
     list_view: list_view
     canvas.before:
         Color:
-            rgba: utils.get_color_from_hex('#206C49')
+            rgba: 255, 255, 255, 1  # Text color
         Rectangle:
             pos: self.pos
             size: self.size
@@ -76,9 +92,17 @@ CareAppRoot:
             Label:
                 halign: 'center'
                 valign: 'middle'
-                text: 'Select a service from the list for more information.'
+                text: 'Select a service from the list for more information'
                 text_size: self.size
-                color: 0, 0, 0, 1  # Text color
+                font_size: '18dp'
+                color: 255, 255, 255, 1
+                canvas.before:
+                    Color:
+                        # Text color
+                        rgba: 0, 0, 0, 1
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
     ListView:
         id: list_view
         adapter: la.ListAdapter(data=[], cls=ok.ServiceListItem, args_converter=root.disability_converter)
@@ -88,7 +112,7 @@ CareAppRoot:
         orientation: 'vertical'
         canvas.before:
             Color:
-                rgba: utils.get_color_from_hex('#206C49')
+                rgba: 0, 0, 0, 1
             Rectangle:
                 pos: self.pos
                 size: self.size

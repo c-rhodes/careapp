@@ -1,40 +1,719 @@
 {
-   "Early Intervention and Prevention Services": {
-      "Audlem and District Community Action (ADCA)":{
-         "about":"Audlem and District Community Action supports people aged 50+ in the Audlem area. The activities they provide include: ",
-         "service_offers":[
-            "a weekly day club",
-            "coffee clubs",
-            "befriending and home library services for people who are housebound or living alone",
-            "voluntary driving scheme to take people to appointments",
-            "volunteer opportunities"
-         ],
-         "about_organisation":"Audlem and District Community Action is a local charity which provides support and activity for older people in Audlem, Hankelow, Buerton, Hatherton, Lightwood Green and the wider rural district.",
-         "service_availibility":"People aged over 50",
-         "contact":{
-            "telephone":"07845 495973",
-            "email":"ronni@chapelhouse.org",
-            "address":{
-               "house_name":"Hankelow Methodist Church",
-               "street_name":"11 Old School Lane",
-               "town":"Hankelow",
-               "city":"Crewe",
-               "postcode":"CW3 0JN"
-            }
-         },
-         "website":"http://www.audlem.org/newsroom/audlem-district-community-action.html"
-      },
-      "Bridgend Centre":{
-
-      }
-   },
-   "Information and Advice Services": {
-      "service": "1"
-   },
-   "Services for Carers": {
-      "service": "1"
-   },
-   "Advocacy Services": {
-      "service": "1"
-   }
+    "Services for Carers": {
+        "Alzheimer's Society": {
+            "about": "The Alzheimers' Society provides a specialist service for carers of people with any type of dementia. This service provides information and support to carers of people with any type of dementia. It assists carers to get support from a number of organisations. There are also 8 monthly dementia cafes across Cheshire East where carers can come for mutual support. The service is available by phone, email, letter, or in person.",
+            "about_organisation": "The Alzheimer's Society also provides a range of support services including:",
+            "service_offers": [
+                "a specialist befriending Service",
+                "8 dementia cafes across the borough",
+                "Tailored support for people with Early Onset dementia",
+                "dementia advisers",
+                "information and advice",
+                "dementia support workers",
+                "Singing for the Brain groups",
+                "Electronic information bulletin",
+                "Peer support groups"
+            ],
+            "area_covered": "All Cheshire East",
+            "service_availibility": "Adults with any type of dementia and their carers",
+            "contact": {
+                "telephone": "01625 503302",
+                "email": "east-cheshire@alzheimers.org.uk",
+                "address": {
+                    "house_name": "Springbank Centre",
+                    "street_name": "Victoria Road",
+                    "town": "Macclesfield",
+                    "city": "Cheshire",
+                    "postcode": "SK10 3LS"
+                }
+            },
+            "website": "http://www.alzheimers.org.uk"
+        },
+        "Cheshire & Warrington Carers Centre": {
+            "about": "1. Carers Reablement Service This provides intensive support to carers to make sure that they are supported in their caring role. The carers centre works with people to plan for the future at times of crisis or considerable change, helping to prevent future crises. The service also includes training sessions & volunteer contact sessions. 2. Carers Breaks This service includes monthly carer groups, relaxation vouchers, individual relaxation sessions & supported group overnight breaks. It aims to give carers a break from their caring responsibilities and gives carers a chance to talk to and support each other. 3. Carer Training This includes 4 week confidence courses, one off practical skills training sessions and one-off personal development sessions. There is also a training opportunities fund that carers can apply to for support to purchase individual courses. 4. Information and advice for Carers - This service has 6 elements - a free phone helpline 5 days a week; twice-weekly drop-in sessions in Crewe and Macclesfield as well as sessions in other areas of Cheshire East; regular out-of-hours sessions; one- to-one appointments or home visits; a newsletter three times a year; and information events and road shows.",
+            "about_organisation": "Cheshire and Warrington Carers Centre delivers a wide range of local support services to meet the differing needs of carers. They can assist with information regarding health issues, entitlements, mobility, grants for holidays, equipment and support. They also offer a wide range of activities, training and events for carers.",
+            "area_covered": "All of East Cheshire",
+            "service_availibility": "Carers who are aged over 18",
+            "contact": {
+                "telephone": "Freephone helpline: 0800 085 0307, Office 01270 257331",
+                "email": "advice@cheshirecarerscentre.org.uk",
+                "address": {
+                    "house_name": "146",
+                    "street_name": "London Road",
+                    "town": "Northwich",
+                    "city": "Cheshire",
+                    "postcode": "CW9 5HH"
+                }
+            },
+            "website": "http://www.carers.org/cheshire"
+        },
+        "Crossroads Care Cheshire, Manchester and Merseyside": {
+            "about": "Carers' support. In-Time is a community-based assessment, information, support and advocacy service for carers aged 18+ who are new to caring or who have not accessed any support before. Each carer has the opportunity to discuss the impact of caring and complete an individual action plan linking them to support including health care services, breaks, counselling, training and legal advice.",
+            "about_organisation": "Crossroads CMM is a local charity providing support services for carers and people with care needs. It is a network partner of the Carers Trust which champions carers' issues at a national level. The aim of Carers Trust is to relieve the stresses experienced by unpaid carers.",
+            "service_offers": [
+                "healthy eating and nutrition",
+                "dementia awareness",
+                "first aid",
+                "safer handling and falls prevention",
+                "winter and emergency planning",
+                "safer handling of medication",
+                "personal development",
+                "end of life / bereavement."
+            ],
+            "area_covered": "All of Cheshire East",
+            "service_availibility": "All Carers over the age of18",
+            "contact": {
+                "telephone": "01260 292850",
+                "email": "cheshireeast@carerstrust4all.org.uk",
+                "address": {
+                    "house_name": "Overton House",
+                    "street_name": "West Street",
+                    "town": "Congleton",
+                    "city": "Cheshire",
+                    "postcode": "CW12 1JY"
+                }
+            },
+            "website": "http://www.carerstrust4all.org.uk"
+        },
+        "Greater Merseyside Connexions Partnership": {
+            "about": "Greater Merseyside Connexions Partnership's dedicated and experienced professional Careers Adviser provides information, advice and support to carers on employment, training and volunteering. The Careers Advisor also helps to look for supported work experience placements for carers to gain confidence and skills within the workplace.",
+            "about_organisation": "Greater Merseyside Connexions provides services across Merseyside and Cheshire and works with employers to match people to available work. They give coaching on interviews for specific vacancies and help with applications through job clubs, one to one support and group work sessions.",
+            "area_covered": "All of East Cheshire",
+            "service_availibility": "Carers over 18 within Cheshire East",
+            "contact": {
+                "telephone": "07791333241",
+                "email": "nicola.holyoak@connexionslive.com",
+                "address": {
+                    "house_name": "Greater Merseyside Connexions Partnership, Head Office, Strand House",
+                    "street_name": "21 Strand Street",
+                    "town": "n/a",
+                    "city": "Liverpool",
+                    "postcode": "L1 8LT"
+                }
+            },
+            "website": "http://www.connexionslive.com"
+        },
+        "Making Space": {
+            "about": "Making Space carry out carers' assessments for people aged 18 and over who care for someone with a mental health condition. The service also reviews existing carer needs assessments to ensure that they are up-to-date and still address the needs of the carer.",
+            "about_organisation": "Making Space has been working in healthcare, support and enablement services for people affected by mental health conditions for 30 years. More recently the organisation has extended its service to any group of people who are in need of care and support,including physical and/or mental health conditions and people with learning disabilities and dementia, and their carers.",
+            "area_covered": "All East Cheshire",
+            "service_availibility": "Carers aged 18 and over",
+            "contact": {
+                "telephone": "Main line 01606 786710, Mobile (Jane Reeves): 07843268001",
+                "email": "jane.reeves@makingspace.co.uk",
+                "address": {
+                    "house_name": "Waterside House",
+                    "street_name": "Navigation Road",
+                    "town": "Northwich",
+                    "city": "Cheshire",
+                    "postcode": "CW8 1BE"
+                }
+            },
+            "website": "http://www.makingspace.co.uk"
+        },
+        "Neuromuscular Centre (NMC)": {
+            "about": "The Neuromuscular Centre's Early Intervention & Prevention service for carers provides regular breaks for carers of people with muscular dystrophy. They have access to the NMC carer centre and the opportunity to get involved in activities such as gardening and DIY, alternative therapy and carer counselling sessions.",
+            "about_organisation": "The NMC provides a range of services and specialist advice for people with Muscular Dystrophy ranging from physiotherapy, training, Design + Print Services, support and advice.",
+            "area_covered": "Across Cheshire East",
+            "service_availibility": "People 18 and over with Neuromuscular conditions and their families / carers",
+            "contact": {
+                "telephone": "01606 860911",
+                "email": "matthew.lanham@nmcentre.com",
+                "address": {
+                    "house_name": "The Neuromuscular Centre",
+                    "street_name": "Woodford Lane West",
+                    "town": "Winsford",
+                    "city": "Cheshire",
+                    "postcode": "CW7 4EH"
+                }
+            },
+            "website": "http://www.nmcentre.com/"
+        },
+        "Peaks and Plains Housing Trust": {
+            "about": "Peaks and Plains Housing Trust runs the Carers' Alert Card for Emergencies (ACE) scheme. When a carer signs up to the scheme, an emergency plan is agreed between them and Peaks and Plains, and an ACE card with an emergency contact number is given. If an emergency then happens leaving the cared for person without anyone to care for them, the emergency contacts identified in the plan are contacted. If for any reason these are not available, Peaks & Plains will contact the local Social Services team who will arrange for replacement care where necessary.",
+            "about_organisation": "Peaks and Plains Housing Trust is a not-for-profit housing provider based in Macclesfield with 5,000 affordable homes for rent in Macclesfield and surrounding areas. They also offer the Trustlink service which provides support and reassurance for vulnerable and older customers.",
+            "area_covered": "Across Cheshire Eastt",
+            "service_availibility": "Carers living in Cheshire East",
+            "contact": {
+                "telephone": "01625 428433",
+                "email": "trust@peaksplains.org",
+                "address": {
+                    "house_name": "Peaks and Plains Housing Trust",
+                    "street_name": "Ropewalks",
+                    "town": "Newton street",
+                    "city": "Macclesfield",
+                    "postcode": "SK11 6QJ"
+                }
+            },
+            "website": "http://trustlink.peaksplains.org"
+        }
+    },
+    "Discharge from Hospital Services": {
+        "Age UK Cheshire and Age UK Cheshire East": {
+            "about": "The Long Term Care Delayed Discharge Placement Service (LTDS) supports patients who are being discharged from Macclesfield and Leighton General Hospitals. It provides advice and information to staff, patients and their carers so that they can make informed decisions about the support they need. This includes information on care in the home, respite, long term care and up-to-date care home vacancy lists.",
+            "about_organisation": "Age UK Cheshire East and Age UK Cheshire provide a range of care and support services to enable older people to continue to live full and active lives, take part in community activities, and remain in good mental and physical health for as long as possible.",
+            "area_covered": "Macclesfield and Leighton General Hospitals",
+            "service_availibility": "Macclesfield and Leighton General Hospital patients",
+            "contact": {
+                "telephone": "",
+                "email": "",
+                "address": {
+                    "house_name": "",
+                    "street_name": "",
+                    "town": "",
+                    "city": "",
+                    "postcode": ""
+                }
+            },
+            "website": ""
+        },
+        "British Red Cross": {
+            "about": "The British Red Cross provides a Support at Home service which gives support to patients who are being discharged Macclesfield General Hospital. It offers practical help in the home for 4 - 6 weeks for people who are leaving hospital or those who are at risk of hospital admission. This support can include confidence building, shopping, form filling, carer respite, assistance with appointments, information and telephone support.",
+            "about_organisation": "The British Red Cross offers support for adults of all ages, but focuses on older people and those living with a disability. They offer a wide range of support services including reablement, domestic and personal care, wheelchair and other equipment loans and transport.",
+            "area_covered": "All Cheshire East",
+            "service_availibility": "Individuals leaving Macclesfield or Leighton General Hospitals and those at risk of hospital admission who are residents of Cheshire East.",
+            "contact": {
+                "telephone": "",
+                "email": "",
+                "address": {
+                    "house_name": "",
+                    "street_name": "",
+                    "town": "",
+                    "city": "",
+                    "postcode": ""
+                }
+            },
+            "website": ""
+        }
+    },
+    "Technical Assessments": {
+        "Age UK Cheshire and Age UK Cheshire East": {
+            "about": "The Deafness Support Network provides a range of services for D/deaf people aged 50+ living anywhere in Cheshire East.",
+            "about_organisation": "The Deafness Support Network (DSN) delivers practical services, advice and support to D/deaf people, and their families and carers, across the North West. It is the service provider organisation for D/deaf people in the county of Cheshire and the surrounding areas.",
+            "service_offers": [
+                "carrying out specialist assessments provided by a professionally qualified and experienced Technical Officer",
+                "giving practical advice on how to operate existing hearing aids",
+                "advice on communication tactics and coping skills",
+                "work with clients on a 1:1 basis to determine the most appropriate technical equipment for their individual needs, at home, and socially",
+                "assessing the equipment needs of people with a dual sensory loss (D/deafblindness)",
+                "issuing equipment once the assessment (and application of FACS criteria) has been completed",
+                "providing operator manuals and troubleshooting guides for ease of use."
+            ],
+            "area_covered": "All East Cheshire",
+            "service_availibility": "Older people aged 50 and over within Cheshire East",
+            "contact": {
+                "telephone": "Head office 0808 2082440, Northwich 01606 47831, Textphone 01606 350823",
+                "email": "dsn@dsnonline.co.uk",
+                "address": {
+                    "house_name": "144",
+                    "street_name": "London Road",
+                    "town": "Northwich",
+                    "city": "Cheshire",
+                    "postcode": "CW9 5HH"
+                }
+            },
+            "website": "http://www.dsnonline.co.uk"
+        }
+    },
+    "Technical Independent Living Advice and Support Service (Brokerage)": {
+        "Cheshire Centre for Independent Living (CCIL) in partnership with Age UK Cheshire": {
+            "about": "Cheshire Centre for Independent Living works in partnership with Age UK Cheshire to provide an impartial advice and support planning service. open to all adults aged 18 and above who are eligible for a personal budget and/or a direct payment from Cheshire East Council, and to self funders. The service includes:",
+            "about_organisation": "Cheshire Centre for Independent Living is a not-for-profit charitable user-led organisation which is run and controlled by disabled people. It was established in 1992 and provides a range of support services which are determined by the needs and aspirations of disabled people. Age UK Cheshire provides a range of care and support services to enable older people to continue to live full and active lives, participate in community activity, and to remain in good mental and physical health for as long as possible.",
+            "service_offers": [
+                "offering a designated Independent Living Advisor to support personal progress and welfare, listening to individual requirements",
+                "assisting with support planning to suit individual needs and aspirations within agreed budgets, encouraging innovative alternatives to ‘traditional' services",
+                "personalising communication methods to suit the individual",
+                "implementing approved support plans and assisting with financial costings/budgeting",
+                "undertaking regular reviews",
+                "facilitating peer, informal or circles of support",
+                "supporting with the recruitment of PAs and ongoing technical/specialist advice (e.g. employment law/paperwork), assisting with audit preparation",
+                "liaising/negotiating with care providers and signposting to community based services, third-party managed account/payroll providers, money mentoring service, or other funding sources (e.g. charitable grants)"
+            ],
+            "area_covered": "All Cheshire East",
+            "service_availibility": "",
+            "contact": {
+                "telephone": "",
+                "email": "",
+                "address": {
+                    "house_name": "",
+                    "street_name": "",
+                    "town": "",
+                    "city": "",
+                    "postcode": ""
+                }
+            },
+            "website": ""
+        }
+    },
+    "Advocacy Services": {
+        "Cheshire Independent Advocacy Services": {
+            "about": "1. Independent Mental Capacity Advocacy (IMCA). This service is available to vulnerable people who lack the capacity to make certain important decisions concerning serious medical treatment, changes to accommodation, adult protection issues and some care reviews, and who have no family or friends whom it would be appropriate to consult about those decisions. The role of the advocate is to gather information and provide support to the person, as well as representing their wishes, feelings, beliefs and values during decision making processes. The IMCA service is also responsible for deprivation of liberty issues under the Mental Capacity Act Deprivation of Liberty Safeguards. These safeguards ensure that no-one is deprived of their liberty in a hospital or care home without good reason, and that people who are deprived of their liberty receive the care they need while keeping specific rights. 2. Independent Mental Health Advocacy (IMHA). The role of IMHA is to help people obtain information and understand the legislation relating to them and the rights that this gives both them and other people. This service is available to people who meet the eligibility criteria under the Mental Health Act 1983 (as amended by the Mental Health Act 2007). 3. General Advocacy. The advocacy service promotes equal opportunities for everyone, supporting and enabling people to express their views and concerns, access information and services, defend and promote their rights and responsibilities and explore options and choices. Advocates take action to help people say what they want, secure their rights, represent their interests and get access to the services they need.",
+            "about_organisation": "￼Cheshire Independent Advocacy Services consists of Age UK Cheshire, Cheshire Centre for Independent Living, Citizens Advice Bureau Cheshire, Citizens Advice Bureau Cheshire North, Independent Advocacy & East Cheshire Advocacy.",
+            "area_covered": "All Cheshire East",
+            "service_availibility": "All client groups over 18 who reside in Cheshire East",
+            "contact": {
+                "telephone": "",
+                "email": "",
+                "address": {
+                    "house_name": "",
+                    "street_name": "",
+                    "town": "",
+                    "city": "",
+                    "postcode": ""
+                }
+            },
+            "website": ""
+        }
+    },
+    "Information and Advice Services": {
+        "Age UK Cheshire and Age UK Cheshire East": {
+            "about": "‘Supporting You' is an information and advice service for older people run by Age UK Cheshire East in partnership with Age UK Cheshire. It is there to help at times of change in people's lives such as on retirement, after bereavement or on discharge from hospital. There is a wealth of information, and the service is available by phone, online or by home visit.",
+            "about_organisation": "These two organisations provide a range of care and support services which empower and enable older people to continue to live full and active lives, to participate in community activity, and to remain in good mental and physical health for as long as possible.",
+            "area_covered": "All Cheshire East",
+            "service_availibility": "People over 50 and their family / carers",
+            "contact": {
+                "telephone": "01606 881 660",
+                "email": "admin@ageukcheshire.org.uk",
+                "address": {
+                    "house_name": "314",
+                    "street_name": "Chester Road",
+                    "town": "Hartford",
+                    "city": "Northwich",
+                    "postcode": "CW8 2AB"
+                }
+            },
+            "website": "http://www.ageuk.org.uk/cheshire"
+        },
+        "Alzheimer's Society": {
+            "about": "‘Living Well' is an information service for people with any type of dementia living in Cheshire East. There is an electronic bulletin with detailed information about the support available to people with dementia and their carers. There are also four peer support groups for people with dementia, which give them the opportunity to learn from other people with dementia and share their own experiences of living with dementia.",
+            "about_organisation": "The Alzheimer's Society also provides a range of support services including:",
+            "service_offers": [
+                "a specialist befriending Service",
+                "8 dementia cafes across the borough",
+                "tailored support for people with Early Onset dementia",
+                "dementia advisers",
+                "information and advice",
+                "dementia support workers",
+                "Singing for the Brain groups"
+            ],
+            "area_covered": "All Cheshire East",
+            "service_availibility": "Adults with any type of dementia and their carers",
+            "contact": {
+                "telephone": "01625 503302",
+                "email": "east-cheshire@alzheimers.org.uk",
+                "address": {
+                    "house_name": "Springbank Centre",
+                    "street_name": "Victoria Road",
+                    "town": "Macclesfield",
+                    "city": "Cheshire",
+                    "postcode": "SK10 3LS"
+                }
+            },
+            "website": "http://www.alzheimers.org.uk"
+        },
+        "Cheshire East North and Cheshire East Citizens Advice Bureaux": {
+            "about": "Cheshire East and Cheshire East (North) Citizens Advice Bureaux provide information and advice for adults with a mental health condition. The service includes:",
+            "about_organisation": "Cheshire East (North) and Cheshire East Citizens Advice Bureaux can help you sort out your money, legal and other problems. They give free, confidential and impartial information and advice on a wide range of subjects.",
+            "service_offers": [
+                "information on stress, anxiety, and depression",
+                "information on what clients with a mental health condition can do to help themselves",
+                "advice on where to go for help and support",
+                "advice on how to address related problems such as debt, low income, poor housing, stress at work and relationship issues"
+            ],
+            "area_covered": "n/a",
+            "service_availibility": "Adults over 18 with a mental health condition",
+            "contact": {
+                "telephone": "01270 303106",
+                "email": "mhia@cecab.org.uk",
+                "address": {
+                    "house_name": "CECAB",
+                    "street_name": "50 Victoria Street",
+                    "town": "Crewe",
+                    "city": "Cheshire",
+                    "postcode": "Cheshire"
+                }
+            },
+            "website": "http://www.cecab.org.uk/A02/mental_healt h_info_project/about_us/about_us.html"
+        },
+        "Deafness Support Network": {
+            "about": "The Deafness Support Network provides a one stop shop for information and advice that is otherwise inaccessible to D/deaf people. They use the client's first method of communication - for example British Sign Language. The service includes:",
+            "about_organisation": "The Deafness Support Network (DSN) delivers practical services, advice and support to D/deaf people, and their families and carers, across the North West. It is the service provider organisation for D/deaf people in the county of Cheshire and the surrounding areas.",
+            "service_offers": [
+                "translating and explaining letters",
+                "signposting to other services",
+                "provision of Deaf Awareness",
+                "free use of internet and training/support to use IT"
+            ],
+            "area_covered": "All of East Cheshire",
+            "service_availibility": "Adults over 18 within Cheshire East",
+            "contact": {
+                "telephone": "Head Office 0808 2082440, Northwich Office 01606 47831, Textphone 01606 350823",
+                "email": "dsn@dsnonline.co.uk",
+                "address": {
+                    "house_name": "144",
+                    "street_name": "London Road,",
+                    "town": "Northwich",
+                    "city": "Cheshire",
+                    "postcode": "CW9 5HH."
+                }
+            },
+            "website": "http://www.dsnonline.co.uk"
+        },
+        "Disability Information Bureau (DIB)": {
+            "about": "The Disability Information Bureau's information & advice service gives a wide range of independent information and advice on all subjects relating to physical disability. This is delivered in a number of different formats including:",
+            "about_organisation": "The Disability Information Bureau is staffed by volunteers with first hand experience of disability. It provides a free and confidential service on all aspects of disability for disabled people, carers, friends and professionals.",
+            "service_offers": [
+                "telephone helplines",
+                "face to face appointments",
+                "drop in sessions",
+                "accessible websites",
+                "social media",
+                "leaflets, newsletters and information packs"
+            ],
+            "area_covered": "Cheshire East (north) area (Macclesfield, Poynton, Wilmslow, Knutsford)",
+            "service_availibility": "Physically disabled adults and their families/ carers",
+            "contact": {
+                "telephone": "01625 501759",
+                "email": "info@dibservices.org.uk",
+                "address": {
+                    "house_name": "Disability Information Bureau,",
+                    "street_name": "Pierce Street",
+                    "town": "Macclesfield",
+                    "city": "Cheshire",
+                    "postcode": "SK11 6ER"
+                }
+            },
+            "website": "http://www.dibservices.org.uk"
+        },
+        "Neuromuscular Centre (NMC)": {
+            "about": "The Neuromuscular Centre provides information and advice for adults who are physically disabled due to neuromuscular conditions. This service includes:",
+            "about_organisation": "The NMC provides a range of services and specialist advice for people with muscular dystrophy including physiotherapy, training, Design + Print Services, support and advice.",
+            "service_offers": [
+                "face-to-face discussions",
+                "home visits",
+                "workshops and briefings",
+                "leaflets",
+                "online advice forums",
+                "online bank of resources and reference information",
+                "a quarterly magazine."
+            ],
+            "area_covered": "Across Cheshire East, with a base in Winsford.",
+            "service_availibility": "People aged 18 and over with a neuromuscular condition and their families / Carers",
+            "contact": {
+                "telephone": "01606 860911",
+                "email": "matthew.lanham@nmcentre.com",
+                "address": {
+                    "house_name": "The Neuromuscular Centre",
+                    "street_name": "Woodford Lane West",
+                    "town": "Winsford",
+                    "city": "Cheshire",
+                    "postcode": "CW7 4EH"
+                }
+            },
+            "website": "http://www.nmcentre.com/"
+        }
+    },
+    "Early Intervention and Prevention Services": {
+        "Audlem and District Community Action (ADCA)": {
+            "about": "Audlem and District Community Action supports people aged 50+ in the Audlem area. The activities they provide include: ",
+            "service_offers": [
+                "a weekly day club",
+                "coffee clubs",
+                "befriending and home library services for people who are housebound or living alone",
+                "voluntary driving scheme to take people to appointments",
+                "volunteer opportunities"
+            ],
+            "about_organisation": "Audlem and District Community Action is a local charity which provides support and activity for older people in Audlem, Hankelow, Buerton, Hatherton, Lightwood Green and the wider rural district.",
+            "service_availibility": "People aged over 50",
+            "contact": {
+                "telephone": "07845 495973",
+                "email": "ronni@chapelhouse.org",
+                "address": {
+                    "house_name": "Hankelow Methodist Church",
+                    "street_name": "11 Old School Lane",
+                    "town": "Hankelow",
+                    "city": "Crewe",
+                    "postcode": "CW3 0JN"
+                }
+            },
+            "website": "http://www.audlem.org/newsroom/audlem-district-community-action.html"
+        },
+        "Bridgend Centre": {
+            "about": "The Bridgend Centre is based in Bollington and is open to anyone in the surrounding areas. It offers: ",
+            "service_offers": [
+                "a drop-in service",
+                "community support in times of crisis",
+                "weekly health and educational sessions",
+                "information and help with form filling",
+                "a charity shop",
+                "volunteer opportuniteit",
+                "reminiscence sessions"
+            ],
+            "about_organisation": "The Bridgend Centre is a cooperative which was set up to create positive change in people's lives. It aims to improve the quality of life for local people, especially for those who feel lonely or isolated.",
+            "service_availibility": "Anyone over 18",
+            "contact": {
+                "telephone": "01625 576311",
+                "email": "info@bridgendcentre.org.uk",
+                "address": {
+                    "house_name": "Bridgend Centre",
+                    "street_name": "104 Palmerston Street",
+                    "town": "Bollington",
+                    "city": "Cheshire",
+                    "postcode": "SK10 5PW"
+                }
+            },
+            "website": "http://www.bridgendcentre.org.uk/"
+        },
+        "Cheshire Centre for Independent Living (CCIL)": {
+            "about": "Cheshire Centre for Independent Living runs ‘Good Company' social activity groups which provide weekly activity sessions for learning disabled / physically disabled adults aged 19 - 65. There are four groups which meet across Cheshire East and enjoy activities such as cookery, crafts, photography and music. They also have trips out, for example bowling, or to the cinema or theatre. All the meeting venues have fully accessible facilities.",
+            "about_organisation": "Cheshire Centre for Independent Living is a not-for-profit charitable user-led organisation which is run and controlled by disabled people. It was established in 1992 and provides a range of support services which are determined by the needs and aspirations of disabled people.",
+            "area_covered": "Good Company currently offers services in Macclesfield, Congleton, Crewe and Sandbach.",
+            "service_availibility": "Physically and/or learning disabled people aged 18-65.",
+            "contact": {
+                "telephone:": "01606 331853 or 0845 340 2777",
+                "email": "office@cheshirecil.org",
+                "address": {
+                    "house_name": "Cheshire Centre for Independent Living",
+                    "street_name": "Denton Drive",
+                    "town": "Northwich",
+                    "city": "Cheshire",
+                    "postcode": "CW9 7LU"
+                }
+            },
+            "website": "http://www.cheshirecil.org/"
+        },
+        "Cheshire Community Action": {
+            "about": "Cheshire Community Action runs the Community Agents service, providing people aged 55 and over with a link to other organisations which can support them in their everyday lives. The Community Agents' service includes: ",
+            "service_offers": [
+                "arranging drop-in sessions",
+                "community based activities",
+                "financial awareness support",
+                "helping to understand what other services there are and how to access them",
+                "links to time banking services"
+            ],
+            "about_organisation": "Cheshire Community Action (CCA) works with the rural communities of Cheshire, Halton and Warrington. It is involved in the development of sustainable and vibrant communities where people want to live and work. CCA provides advice and guidance to local communities, helping to identify problems and seek solutions. CCA helps people to be self-reliant, improving the quality of life of older people in the community.",
+            "area_covered": "All of East Cheshire",
+            "service_availibility": "Older people aged 55+",
+            "contact": {
+                "telephone": "01606 350042",
+                "email": "Carol Weaver, Community Agent South: Tel: 07825 291958 : e-mail : carol.weaver@cheshireaction.org.uk, Lisa Gordon, Community Agent South: Tel: 07823 325766 : e-mail : lisa.gordon@cheshireaction.org.uk, Alyssa Baines, Community Agent Centre: Tel: 07901 787272 : e-mail : alyssa.baines@cheshireaction.org.uk, Kelly Druce, Community Agent North: Tel: 07825 296091 : e-mail : kelly.druce@cheshireaction.org.uk",
+                "address": {
+                    "house_name": "Cheshire Community Action Suite G7, Ground Floor, Northwich Business Centre",
+                    "street_name": "Meadow Street",
+                    "town": "Northwich",
+                    "city": "Cheshire",
+                    "postcode": "CW9 5BF"
+                }
+            },
+            "website": "http://www.cheshireaction.org.uk"
+        },
+        "Crossroads Care - Cheshire, Manchester and Merseyside": {
+            "about": "Crossroads Care holds a Singing Together group for adults over 50 who have social care needs. The weekly sessions, held in Congleton, alternate between a music/singing session one week and a drop in social and reminiscence session the next.",
+            "about_organisation": "Crossroads CMM is a local charity providing support services for carers and people with care needs. It is a network partner of the Carers Trust which champions carers' issues at a national level. The aim of Carers Trust is to relieve the stresses experienced by unpaid carers.",
+            "area_covered": "Good Company currently offers services in Macclesfield, Congleton, Crewe and Sandbach.",
+            "service_availibility": "People over 50",
+            "contact": {
+                "telephone": "01260 292850",
+                "email": "cheshireeast@carerstrust4all.org.uk",
+                "address": {
+                    "house_name": "Overton House",
+                    "street_name": "West Street",
+                    "town": "Congleton",
+                    "city": "Cheshire",
+                    "postcode": "CW12 1JY"
+                }
+            },
+            "website": "http://www.carerstrust4all.org.uk"
+        },
+        "Deafness Support Network (DSN)": {
+            "about": "Deafness Support Network supports D/deaf or D/deafblind adults, children and young people across Cheshire East. The word Deaf (with a capital \"D\") is used to denote individuals whose first language is British Sign Language (BSL), whilst the term D/deaf refers to everyone with a hearing loss: Deaf, deaf, deafened, hard of hearing and Deafblind. Their service includes: ",
+            "service_offers": [
+                "assisting social workers to complete Community Care assessments and complex needs assessments",
+                "undertaking specialist assessments",
+                "facilitating communication with care professionals and social workers",
+                "specialist rehabilitation including mobility training and life skills"
+            ],
+            "about_organisation": "The Deafness Support Network (DSN) delivers practical services, advice and support to D/deaf people, and their families and carers, across the North West. It is the service provider organisation for D/deaf people in the county of Cheshire and the surrounding areas.",
+            "area_covered": "All of East Cheshire",
+            "service_availibility": "Children and Adults within Cheshire East",
+            "contact": {
+                "telephone": "Head office 0808 2082440, Northwich 01606 47831, Textphone 01606 350823",
+                "email": "dsn@dsnonline.co.uk",
+                "address": {
+                    "house_name": "144 London Road",
+                    "street_name": "Meadow Street",
+                    "town": "Northwich",
+                    "city": "Cheshire",
+                    "postcode": "CW9 5HH"
+                }
+            },
+            "website": "http://www.dsnonline.co.uk"
+        },
+        "Disability Information Bureau (DIB)": {
+            "about": "The Disability Information Bureau's early intervention and prevention service provides practical support to physically disabled adults their families. It helps them to look at their finances and to keep them out of financial crisis. The service includes:",
+            "service_offers": [
+                "benefit checks",
+                "assistance with form filling",
+                "benefit reconsiderations",
+                "better off in work calculations",
+                "financial awareness training"
+            ],
+            "about_organisation": "The Disability Information Bureau is staffed by volunteers with first hand experience of disability. It provides a free and confidential service on all aspects of disability for disabled people, carers, friends and professionals.",
+            "area_covered": "Cheshire East (north) area (Macclesfield, Poynton, Wilmslow, Knutsford)",
+            "service_availibility": "Physically disabled adults and their families/ carers",
+            "contact": {
+                "telephone": "01625 501759",
+                "email": "info@dibservices.org.uk",
+                "address": {
+                    "house_name": "Disability Information Bureau",
+                    "street_name": "Pierce Street",
+                    "town": "Macclesfield",
+                    "city": "Cheshire",
+                    "postcode": "SK11 6ER"
+                }
+            },
+            "website": "http://www.dibservices.org.uk"
+        },
+        "Independent Advocacy (Cheshire)": {
+            "about": "Independent Advocacy's early intervention & prevention service supports learning disabled adults to access services such as housing, healthcare, employment and education. It also supports the use of activities, such as sports or arts, within the local community. Drop-in awareness sessions are held in various locations to promote the service and ensure that it is accessible to everyone.",
+            "about_organisation": "Independent Advocacy provides a range of services in Cheshire East. They encourage and promote an individual's right to make choices and retain control over their lives at all times by providing an advocacy service. This supports an individual through a time of crisis, for example an emergency relating to housing, safeguarding of a vulnerable person, financial crisis, legal proceedings or discrimination issues. There is also specialist advocacy support for individuals who lack capacity to make informed decisions.",
+            "area_covered": "All of Cheshire East",
+            "service_availibility": "Learning disabled adults aged 18 +",
+            "contact": {
+                "telephone": "01625 429922",
+                "email": "rebekah.hall@independent-advocacy.org.uk",
+                "address": {
+                    "house_name": "Independent Advocacy, Sension House",
+                    "street_name": "Denton Drive",
+                    "town": "Northwich",
+                    "city": "Cheshire",
+                    "postcode": "CW9 5HB"
+                }
+            },
+            "website": "n/a"
+        },
+        "IRIS Vision": {
+            "about": "Making Space provides services for adults with mental health needs (including dementia) and their carers across Cheshire East. It includes:",
+            "service_offers": [
+                "access to 1:1 support",
+                "information, advice, emotional and practical support to the person with a mental health condition and their circle of support",
+                "signposting",
+                "workshops on mental health, dementia, indentifying triggers, and coping strategies",
+                "drop-in sessions",
+                "support to access volunteering opportunities",
+                "access to education and training placements"
+            ],
+            "about_organisation": "Making Space has been working in healthcare, support and enablement services for 30 years supporting people affected by mental health conditions.",
+            "area_covered": "All of East Cheshire",
+            "service_availibility": "Adults with a mental health needs and carers",
+            "contact": {
+                "telephone": "Main line 01606 786710, Mobile (Jane Reeves): 07843268001",
+                "email": "jane.reeves@makingspace.co.uk",
+                "address": {
+                    "house_name": "Waterside House",
+                    "street_name": "Navigation Road",
+                    "town": "Northwich",
+                    "city": "Cheshire",
+                    "postcode": "CW8 1BE"
+                }
+            },
+            "website": "http://www.makingspace.co.uk"
+        },
+        "Methodist Homes (MHA)": {
+            "about": "Methodist Homes run Macclesfield and District Live at Home Scheme, providing a range of services for older people in the north of Cheshire East. Services include:",
+            "service_offers": [
+                "a teleprompt for getting up and out of bed",
+                "medication reminders",
+                "meal reminders",
+                "telephone befriending",
+                "befriending",
+                "assisted pension collection",
+                "shopping",
+                "pop up cafes and a dementia cafe in Macclesfield"
+            ],
+            "about_organisation": "MHA is a charity providing care, accommodation and support services for more than 16,000 older people throughout Britain. Their mission is to improve the quality of life for older people.",
+            "area_covered": "Cheshire East (North) Area (Macclesfield, Poynton, Wilmslow, Knutsford)",
+            "service_availibility": "People aged over 50",
+            "contact": {
+                "telephone": "01625 612410",
+                "email": "enquiries@mha.org.uk",
+                "address": {
+                    "house_name": "Live at Home Manager Macclesfield and District Live at Home Scheme",
+                    "street_name": "Westminster Road",
+                    "town": "Macclesfield",
+                    "city": "Cheshire",
+                    "postcode": "SK10 1BX"
+                }
+            },
+            "website": "http://www.mha.org.uk"
+        },
+        "Neuromuscular Centre (NMC)": {
+            "about": "The Neuromuscular Centre runs an early intervention and prevention service supporting people with neuromuscular conditions and their families. The service includes:",
+            "service_offers": [
+                "advice on home adaptations",
+                "outreach to people's homes and work",
+                "access to NMC services",
+                "support in managing personal budgets",
+                "treatments and therapies",
+                "bereavement support",
+                "special support for people new to adult services",
+                "access to mutual support"
+            ],
+            "about_organisation": "The NMC provides a range of services and specialist advice for people with muscular dystrophy including physiotherapy, training, Design + Print Services, support and advice.",
+            "area_covered": "Across Cheshire East, with a base in Winsford.",
+            "service_availibility": "People aged 18 and over with neuromuscular conditions and their families/carers",
+            "contact": {
+                "telephone": "01606 860911",
+                "email": "matthew.lanham@nmcentre.com",
+                "address": {
+                    "house_name": "The Neuromuscular Centre",
+                    "street_name": "Woodford Lane West",
+                    "town": "Winsford",
+                    "city": "Cheshire",
+                    "postcode": "CW7 4EH"
+                }
+            },
+            "website": "http://www.nmcentre.com/"
+        },
+        "Time Out Group": {
+            "about": "The Time Out Group provides learning disabled adults with social, leisure and learning opportunities. Activities include:",
+            "service_offers": [
+                "2 drop-in evening sports sessions per week",
+                "4 evening drop-in groups per month including financial training courses, employment skills workshops & networking groups for families and carers."
+            ],
+            "about_organisation": "The Time Out Group is about learning disabled people having fun and socialising.",
+            "area_covered": "Handforth, Wilmslow and Alderley Edge.",
+            "service_availibility": "Learning disabled adults over 18",
+            "contact": {
+                "telephone": "0784 596 8331",
+                "email": "miriamwild@hotmail.co.uk",
+                "address": {
+                    "house_name": "Time Out Group",
+                    "street_name": "11 Heyes Lane",
+                    "town": "Alderley Edge",
+                    "city": "Cheshire",
+                    "postcode": "SK9 7LA"
+                }
+            },
+            "website": "http://www.timeoutgroup.org.uk"
+        },
+        "Wishing Well": {
+            "about": "Wishing Well is developing social groups for older people which will be run by volunteers in their own local areas. This includes developing transport schemes for older people.",
+            "about_organisation": "The aim of Wishing Well is to improve the health and wellbeing of local people by providing a range of activities and learning as requested by them.",
+            "area_covered": "Cheshire East (South) area, specifically Alsager, Haslington. Sandbach, Shavington, Middlewich, Nantwich and Crewe.",
+            "service_availibility": "People aged 50 who live in the Cheshire East (South) area",
+            "contact": {
+                "telephone": "01270 256919, 01270 253551",
+                "email": "jessica.cole@cecpct.nhs.uk",
+                "address": {
+                    "house_name": "The Wishing Well Project Jubilee House",
+                    "street_name": "St Paul's Street",
+                    "town": "Crewe",
+                    "city": "Cheshire",
+                    "postcode": "CW1 2QA"
+                }
+            },
+            "website": "http://www.wishingwellproject.com"
+        }
+    }
 }
